@@ -8,11 +8,11 @@ export default function Footer() {
           <div className="w-6 h-6 rounded bg-primary flex items-center justify-center text-primary-foreground font-bold font-mono text-xs">
             /
           </div>
-          <span className="font-bold tracking-tight">RootCloud Consulting</span>
+          <span className="font-bold tracking-tight">Cloud Consulting</span>
         </div>
         
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} RootCloud. All rights reserved.
+          © {new Date().getFullYear()} Private Cloud. All rights reserved.
         </p>
       </div>
     </footer>

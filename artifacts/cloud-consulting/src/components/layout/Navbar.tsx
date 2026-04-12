@@ -8,7 +8,7 @@ export default function Navbar() {
           <div className="w-8 h-8 rounded bg-primary flex items-center justify-center text-primary-foreground font-bold font-mono">
             /
           </div>
-          <span className="font-bold text-xl tracking-tight">RootCloud</span>
+          <span className="font-bold text-xl tracking-tight">Private Cloud</span>
         </div>
         
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
