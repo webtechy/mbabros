@@ -2,7 +2,7 @@ Crypto Mode Consulting
 Identity
 Crypto Mode Consulting provides cloud services for small to midsize local businesses
 
-https://mbabros.vercel.app
+https://mbabros.com
 
 
 Problem

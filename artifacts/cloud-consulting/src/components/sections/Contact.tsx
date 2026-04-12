@@ -40,8 +40,8 @@ export default function Contact() {
                   <div className="w-10 h-10 rounded bg-background flex items-center justify-center border border-border">
                     <span className="text-primary font-mono text-sm">W</span>
                   </div>
-                  <a href="https://mbabros.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                    mbabros.vercel.app
+                  <a href="https://mbabros.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                    mbabros.com
                   </a>
                 </div>
                 <div className="flex items-center gap-4 text-muted-foreground">
