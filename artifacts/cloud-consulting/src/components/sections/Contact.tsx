@@ -7,19 +7,46 @@ export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: formData.get('name')?.toString() ?? '',
+      email: formData.get('email')?.toString() ?? '',
+      message: formData.get('message')?.toString() ?? '',
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || 'Failed to send message');
+      }
+
       toast({
-        title: "Message received",
+        title: 'Message sent',
         description: "I'll get back to you within 24 hours to schedule our call.",
       });
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+      form.reset();
+    } catch (error) {
+      toast({
+        title: 'Message failed',
+        description: 'Unable to send your message. Please try again later.',
+      });
+      console.error('Contact form submit failed:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
