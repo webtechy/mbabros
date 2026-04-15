@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@sendgrid/mail": "^7.11.0"
+    "@sendgrid/mail": "^8.1.6"
   },
   "devDependencies": {
     "typescript": "~5.9.2",
