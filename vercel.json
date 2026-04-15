@@ -1,5 +1,5 @@
 {
-  "installCommand": "pnpm install --filter ./artifacts/cloud-consulting --frozen-lockfile",
+  "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm --dir artifacts/cloud-consulting run build",
   "outputDirectory": "artifacts/cloud-consulting/dist"
 }
